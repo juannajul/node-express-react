@@ -40,7 +40,7 @@
 * url: `127.0.0.1:3000/api/posts/1`.
     ``response:
     {
-        id:1
-        title:"Item 1"
+        id:1,
+        title:"Item 1",
         description:"This is the description for item 1."
     }``
