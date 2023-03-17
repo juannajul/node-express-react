@@ -3,22 +3,18 @@ const fs = require('fs');
 const app = express();
 const port = 5000;
 
-app.get("/api", (req, res) => {
-    res.json({
-        "users": ['userOne', 'userTwo', 'userThree']
-    });
-});
-
 // Response: List of items
-app.get("/api/items", (req, res) => {
+app.get("/api/posts", (req, res) => {
+    // Read the JSON file with the data.
     const data = fs.readFileSync('file.json', 'utf-8');
-    const items = JSON.parse(data)['items'];
+    const items = JSON.parse(data);
     res.json(items);
 });
 
 // Response: Single item by Id
-app.get("/api/items/:id", (req, res) => {
+app.get("/api/posts/:id", (req, res) => {
     const { id } = req.params;
+    // Read the JSON file with the data.
     const data = fs.readFileSync('file.json', 'utf-8');
     const item = JSON.parse(data)['items'][id-1];
     res.json(item);

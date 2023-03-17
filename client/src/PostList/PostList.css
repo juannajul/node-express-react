@@ -1,0 +1,24 @@
+.posts-section{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: auto;
+}
+
+.posts-list-container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    height: auto;
+    margin-top: 50px;
+    padding: 0 0 56px 0;
+}
+
+.posts-counter-title{
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    color: #30a7fd;
+    font-size: 50px;
+}
